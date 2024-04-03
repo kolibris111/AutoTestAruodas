@@ -149,13 +149,55 @@ public class AutoTestAruodas {
         _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[52]/span[1]/div/div/label/span")).click(); //Sutikti su portalo taisyklemis
         _globalDriver.findElement(By.id("submitFormButton")).click(); //Paspausti ivesti skelbima
 
+        _globalDriver.close();
+    }
+    @Test
+    public void Test4(){
+        _globalDriver.findElement(By.id("onetrust-accept-btn-handler")).click();//Patvirtiname slapukus//
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[3]/div[3]/div/div/a")).click(); //Paspausti ideti skelbimą
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/ul/li[2]/ul/li[1]")).click(); //Pasirinkti Butas
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/ul/li[3]/ul/li[1]")).click(); //Pasirinkti Pardavimui
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[3]/span[1]/span")).click(); //Pasirinkti Savivaldybe
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[3]/span[1]/ul[2]/li[8]")).click(); //Pasirinkti Palanga
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[4]/span[1]/span")).click(); //Pasirinkti Gyvenviete
+        _globalDriver.findElement(By.id("districtTitle")).click(); //Pasirinkti Palangos m.
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[5]/span[1]/span[2]")).click(); //Pasirinkti Mikrorajonas
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[5]/span[1]/ul[5]/li")).click(); //Pasirinkti Sventoji
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[6]/span[1]/span[2]")).click(); //Pasirinkti Gatve
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[6]/span[1]/ul[5]/li[1]/input")).sendKeys(Keys.ARROW_DOWN); //Išskleisti sarasa
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[6]/span[1]/ul[5]/li[36]")).click(); //Pasirinkti Bijunu tak.
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[7]/span[1]/input")).sendKeys("14"); //Irasomas nr.
+        _globalDriver.findElement(By.id("fieldFAreaOverAll")).sendKeys("1"); //Irasomas Plotas
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[15]/div/div[1]")).click(); //Parenkamas kambariu skaicius 1
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[16]/div[1]/span[2]/input")).sendKeys("1"); //Irasomas aukstu skaicius
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[16]/div[2]/span[1]/input")).sendKeys("1"); //Irasomas aukstu skaicius is 1
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[16]/div[2]/span[1]/input")).sendKeys(Keys.ARROW_DOWN); //Išskleisti sarasa
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[17]/div[1]/span[1]/span/input")).sendKeys("1999"); //Irasomi statybos metai
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[18]/div/div[8]")).click(); //Pasirinkti pastato tipa Kita
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[19]/div/div[6]")).click(); //Pasirinkti irengimas Kita
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[21]/div/div[10]/label/span")).click(); //Pasirinkti sildymas Kita
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[22]/div/div[2]/div[2]")).click(); //Pasirinkti tipa Patalpa
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[23]/div/div[2]/div[2]")).click(); //Pasirinkti buto paskirtis poilsio
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[40]/div/div[1]/textarea")).sendKeys("NETIKRAS SKELBIMAS"); //Irasomas skelbimo aprasymas
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[42]/div/div[1]/a/input")).sendKeys("C:\\Users\\palub\\OneDrive\\Paveikslėliai\\Namukas.jpg"); //Pasirinkti ikelti nuotrauka
+        try {
+            TimeUnit.SECONDS.sleep(7);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        _globalDriver.findElement(By.id("priceField")).sendKeys("1"); //Irasoma kaina
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[48]/span[1]/input")).sendKeys("63586485"); //Irasomas tel.nr.
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[49]/span[1]/input")).sendKeys("pukismiau12345@inbox.lt"); //Irasomas el.pastas
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[2]/form/ul/li[52]/span[1]/div/div/label/span")).click(); //Sutikti su portalo taisyklemis
+        _globalDriver.findElement(By.id("submitFormButton")).click(); //Paspausti ivesti skelbima
 
-
-
-
-
-        //_globalDriver.close();
+        _globalDriver.close();
     }
 
 
