@@ -1,9 +1,9 @@
 import net.bytebuddy.asm.Advice;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -16,6 +16,7 @@ public class AutoTestAruodas {
     WebDriver _globalDriver;
     String _email;
     String _password;
+    //WebElement _driver;
 
     public static String generateRandomEmail() {
         String[] domains = {"gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "example.com"};
@@ -326,12 +327,40 @@ public class AutoTestAruodas {
         _globalDriver.findElement(By.id("input_FPriceMax")).sendKeys("2000"); //Irasoma kaina iki
         _globalDriver.findElement(By.id("buttonSearchForm")).click(); //Spaudziama ieskoti
 
+    }
+    @Test
+    public void Test7(){
+        //Prisijungus prie paskyros peržiūrėti kelias interjero galerijas
+        _globalDriver.findElement(By.id("onetrust-accept-btn-handler")).click();//Patvirtiname slapukus//
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[3]/div[2]/div[2]/ul/li[2]/a")).click();//Pasirenkama grupe interjeras
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[4]/div[1]/div/div[3]/a[2]/div/h2")).click();//Pasirenkama galerija Svetaine
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[4]/div[1]/div/div[2]/a[2]/div/img")).click();//Pasirenkama nuotrauka perziurai
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[3]/div[1]/div/div[2]/div[2]/a[1]")).click();//Pasirenkama funkcija eiti i sekancia nuotrauka
+        //WebElement buttonElement = _globalDriver.findElement(By.xpath("/html/body/div[1]/div[3]/div[1]/div/div[2]/div[2]/a[1]")); //Pasirenkama funkcija eiti i sekancia nuotrauka 5 kartus
 
+        //for (int i = 0; i < 2; i++) {
+        //    buttonElement.click();
+        //}
+        //try {
+        //    TimeUnit.SECONDS.sleep(10);
+        //} catch (InterruptedException e) {
+         //   e.printStackTrace();
+        //}
+        //NEVEIKIA CIKLAS, REIKIA ISISAISKINTI KODEL
 
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[3]/div[1]/ul/li[14]/a")).click();//Pasirenkama funkcija eiti i Interjeras pagal spalva
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[4]/div[1]/div/div[2]/a[1]/div/img")).click();//Pasirenkama galerija Sviesios spalvos
+        _globalDriver.findElement(By.xpath("/html/body/div[1]/div[4]/div[1]/div/div[3]/a[6]")).click();//Pasirenkama pereiti i sekanti galerijos puslapi
 
-
+        _globalDriver.close();
 
     }
+
 
 
 
