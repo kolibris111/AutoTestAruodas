@@ -358,7 +358,6 @@ public class AutoTestAruodas {
         _globalDriver.findElement(By.xpath("/html/body/div[1]/div[4]/div[1]/div/div[3]/a[6]")).click();//Pasirenkama pereiti i sekanti galerijos puslapi
 
         _globalDriver.close();
-
     }
 
 
